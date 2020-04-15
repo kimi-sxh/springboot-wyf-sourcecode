@@ -14,8 +14,8 @@ import com.wisely.ch7_6.domain.WiselyResponse;
 @Controller
 public class WsController {
 
-	@MessageMapping("/welcome")
-	@SendTo("/topic/getResponse")
+	@MessageMapping("/welcome")//1.请求映射地址
+	@SendTo("/topic/getResponse")//2.向浏览器发送地址的映射
 	public WiselyResponse say(WiselyMessage message) throws Exception {
 		Thread.sleep(3000);
 		return new WiselyResponse("Welcome, " + message.getName() + "!");

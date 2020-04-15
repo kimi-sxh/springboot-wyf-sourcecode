@@ -5,9 +5,15 @@ import java.util.List;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.embedded.ServletListenerRegistrationBean;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+import javax.servlet.annotation.WebListener;
+
 @Controller
 @SpringBootApplication
 public class Ch72Application {
@@ -29,7 +35,7 @@ public class Ch72Application {
 		
 		return "index";
 	}
-	
+
 //	@RequestMapping(value = "/json",produces={MediaType.APPLICATION_JSON_VALUE})
 //	public String json(Model model) {
 //		Person single = new Person("aa",11);
