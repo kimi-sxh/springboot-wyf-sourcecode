@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 
 import com.wisely.domain.Person;
 import com.wisely.support.CustomRepository;
-
+//8.2.1
 public interface PersonRepository extends CustomRepository<Person, Long> {
 	List<Person> findByAddress(String address);
 	

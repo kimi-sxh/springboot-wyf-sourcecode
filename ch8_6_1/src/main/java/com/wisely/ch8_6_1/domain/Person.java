@@ -7,13 +7,13 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document //1
+@Document //1映射bean及mongoDB文档
 public class Person {
-	@Id
+	@Id//文档id
 	private String id;
 	private String name;
 	private Integer age;
-	@Field("locs")
+	@Field("locs")//此属性在文档中的名称为locs
 	private Collection<Location> locations =  new LinkedHashSet<Location>();
 	
 

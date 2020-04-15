@@ -12,8 +12,7 @@ import org.springframework.data.repository.core.RepositoryInformation;
 import org.springframework.data.repository.core.RepositoryMetadata;
 import org.springframework.data.repository.core.support.RepositoryFactorySupport;
 
-public class CustomRepositoryFactoryBean<T extends JpaRepository<S, ID>, S, ID extends Serializable>
-		extends JpaRepositoryFactoryBean<T, S, ID> {// 1
+public class CustomRepositoryFactoryBean<T extends JpaRepository<S, ID>, S, ID extends Serializable> extends JpaRepositoryFactoryBean<T, S, ID> {// 1
 
 	@Override
 	protected RepositoryFactorySupport createRepositoryFactory(EntityManager entityManager) {// 2
