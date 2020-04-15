@@ -16,25 +16,25 @@ import org.springframework.core.io.Resource;
 @PropertySource("classpath:com/wisely/highlight_spring4/ch2/el/test.properties")//7
 public class ElConfig {
 	
-	@Value("I Love You!") //1
+	@Value("I Love You!") //1注入普通支付
     private String normal;
 
-	@Value("#{systemProperties['os.name']}") //2
+	@Value("#{systemProperties['os.name']}") //2注入操作系统属性
 	private String osName;
 	
-	@Value("#{ T(java.lang.Math).random() * 100.0 }") //3
+	@Value("#{ T(java.lang.Math).random() * 100.0 }") //3注入表达式运算结果
     private double randomNumber;
 
-	@Value("#{demoService.another}") //4
+	@Value("#{demoService.another}") //4注入其他bean的属性
 	private String fromAnother;
 
-	@Value("classpath:com/wisely/highlight_spring4/ch2/el/test.txt") //5
+	@Value("classpath:com/wisely/highlight_spring4/ch2/el/test.txt") //5注入文件内容
 	private Resource testFile;
 
-	@Value("http://www.baidu.com") //6 
+	@Value("http://www.baidu.com") //6 注入网址内容
 	private Resource testUrl;
 
-	@Value("${book.name}") //7 
+	@Value("${book.name}") //7 注入属性文件
 	private String bookName;
 
 	@Autowired

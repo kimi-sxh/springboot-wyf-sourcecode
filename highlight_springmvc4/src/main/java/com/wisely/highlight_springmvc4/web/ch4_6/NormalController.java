@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.wisely.highlight_springmvc4.service.DemoService;
 
-//@Controller
+@Controller
 public class NormalController {
 	@Autowired
 	DemoService demoService;

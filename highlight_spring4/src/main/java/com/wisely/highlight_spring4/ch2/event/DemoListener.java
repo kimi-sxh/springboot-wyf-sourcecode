@@ -3,9 +3,11 @@ package com.wisely.highlight_spring4.ch2.event;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
+//¼àÌýÊÂ¼þ
 @Component
 public class DemoListener implements ApplicationListener<DemoEvent> {
 
+	@Override
 	public void onApplicationEvent(DemoEvent event) {
 		
 		String msg = event.getMsg();

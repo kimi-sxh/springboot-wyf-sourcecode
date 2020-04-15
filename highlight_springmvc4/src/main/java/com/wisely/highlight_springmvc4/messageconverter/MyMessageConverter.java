@@ -20,9 +20,8 @@ public class MyMessageConverter extends AbstractHttpMessageConverter<DemoObj> {/
 	}
 	
 	/**
-	 * 3
+	 * 3 处理请求的数据
 	 */
-
 	@Override
 	protected DemoObj readInternal(Class<? extends DemoObj> clazz,
 			HttpInputMessage inputMessage) throws IOException,
@@ -35,7 +34,7 @@ public class MyMessageConverter extends AbstractHttpMessageConverter<DemoObj> {/
 	}
 	
 	/**
-	 * 4
+	 * 4 表明只处理DemoObj
 	 */
 	@Override
 	protected boolean supports(Class<?> clazz) {
@@ -43,7 +42,7 @@ public class MyMessageConverter extends AbstractHttpMessageConverter<DemoObj> {/
 	}
 	
 	/**
-	 * 5
+	 * 5 处理如何输出数据到response
 	 */
 	@Override
 	protected void writeInternal(DemoObj obj, HttpOutputMessage outputMessage)
