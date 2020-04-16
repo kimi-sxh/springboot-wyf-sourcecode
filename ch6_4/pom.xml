@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>ch6_4</name>
-	<description>第6.4章 demo实例代码</description>
+	<description>第6.4章 demo实例代码1</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
