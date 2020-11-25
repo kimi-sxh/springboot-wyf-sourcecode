@@ -8,9 +8,9 @@ public class Main {
 		 AnnotationConfigApplicationContext context =
 	                new AnnotationConfigApplicationContext(ElConfig.class);
 		 
-		 ElConfig resourceService = context.getBean(ElConfig.class);
-		 
-		 resourceService.outputResource();
+		 ElConfig elConfig = context.getBean(ElConfig.class);
+
+		elConfig.outputResource();
 		 
 		 context.close();
 	}
